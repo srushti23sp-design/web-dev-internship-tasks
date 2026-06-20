@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Nation | Elevate Your Limit</title>
+    
+    <!-- 1 GOOGLE FONT: Montserrat (Used for all weights) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* 
+           3 DIFFERENT COLORS USED:
+           1. Pure White (#FFFFFF) - Primary text and clean cards
+           2. Deep Charcoal (#121214) - Dark, premium background contrast
+           3. Neon Lime (#ffee00) - Vibrant, high-energy accent color
+        */
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121214;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        /* Styled Headings */
+        h1, h2, h3 {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #FFFFFF;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #ffee00;
+        }
+
+        /* Styled Paragraphs */
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #FFFFFF;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 10%;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: #FFFFFF;
+        }
+
+        .logo span {
+            color: #ffee00;
+        }
+
+        /* Background Image 1: Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(rgba(18, 18, 20, 0.6), #121214), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 span {
+            color: #ffee00;
+        }
+
+        /* Accent Button */
+        .btn {
+            display: inline-block;
+            background-color: #ffee00;
+            color: #121214;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: transform 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 10%;
+            background-color: #121214;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-Fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            text-align: left;
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: #ffee00;
+        }
+
+        /* Background Image 2: Call to Action Section */
+        .cta {
+            position: relative;
+            padding: 8rem 10%;
+            background: linear-gradient(rgba(18, 18, 20, 0.8), rgba(18, 18, 20, 0.8)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            opacity: 0.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .hero { padding: 0 5%; }
+            .features, .cta { padding: 4rem 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="logo">Fit<span>Nation</span></div>
+    </nav>
+
+    <!-- Hero Section (Background Image 1) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Push Your <span>Limits</span></h1>
+            <p>Crush your Fitness goals with premium training programs, elite coaching, and a high-energy community driven to win.</p>
+            <a href="#" class="btn">Start Training</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose Us</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>01. Elite Coaching</h3>
+                <p>Learn from certified personal trainers dedicated to tracking your progress and perfecting your form.</p>
+            </div>
+            <div class="card">
+                <h3>02. Modern Gear</h3>
+                <p>Train with industry-leading strength machines, cardio equipment, and dedicated recovery spaces.</p>
+            </div>
+            <div class="card">
+                <h3>03. Dynamic Plans</h3>
+                <p>Access customized workout regimens and nutritional blueprints built around your unique lifestyle.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action Section (Background Image 2) -->
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Join The Movement</h2>
+            <p>Sign up today and get your first week entirely free. No hidden contracts. No excuses.</p>
+            <a href="#" class="btn">Claim Free Pass</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Fit Nation. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Nation | Elevate Your Limit</title>
+    
+    <!-- 1 GOOGLE FONT: Montserrat -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* 
+           3 DIFFERENT COLORS USED:
+           1. Pure White (#FFFFFF) - Primary text and clean cards
+           2. Deep Charcoal (#121214) - Dark background contrast
+           3. Neon Lime (#ffee00) - Vibrant accent color
+        */
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121214;
+            color: #FFFFFF;
+            line-height: 1.6;
+            padding-top: 80px; /* Prevents hero content from hiding behind the sticky navbar */
+        }
+
+        /* Styled Headings */
+        h1, h2, h3 {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #FFFFFF;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #ffee00;
+        }
+
+        /* Styled Paragraphs */
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #FFFFFF;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        /* STICKY NAVIGATION BAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 10%;
+            position: fixed; /* Keeps bar at the top while scrolling */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: rgba(18, 18, 20, 0.95); /* Semi-transparent charcoal */
+            backdrop-filter: blur(10px); /* Modern blur effect */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000; /* Ensures it stays above all other content */
+        }
+
+        /* Website Title / Logo */
+        .logo {
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #ffee00;
+        }
+
+        /* Introduction text inside navbar */
+        .nav-intro {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #FFFFFF;
+            opacity: 0.7;
+            max-width: 300px;
+            line-height: 1.3;
+        }
+
+        /* Call-To-Action Button inside navbar */
+        .nav-cta {
+            background-color: #ffee00;
+            color: #121214;
+            padding: 0.6rem 1.2rem;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+            transition: transform 0.2s ease;
+        }
+
+        .nav-cta:hover {
+            transform: scale(1.05);
+        }
+
+        /* FIXED CONTACT BUTTON (Floating on the screen) */
+        .fixed-contact-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #ffee00;
+            color: #121214;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(204, 255, 0, 0.3);
+            z-index: 999;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .fixed-contact-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Simple SVG icon for the contact button */
+        .fixed-contact-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: #121214;
+        }
+
+        /* Background Image 1: Hero Section */
+        .hero {
+            position: relative;
+            height: calc(100vh - 80px);
+            background: linear-gradient(rgba(18, 18, 20, 0.6), #121214), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 span {
+            color: #ffee00;
+        }
+
+        /* Main Page Button */
+        .btn {
+            display: inline-block;
+            background-color: #ffee00;
+            color: #121214;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: transform 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 10%;
+            background-color: #121214;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-Fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            text-align: left;
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: #ffee00;
+        }
+
+        /* Background Image 2: Call to Action Section */
+        .cta {
+            position: relative;
+            padding: 8rem 10%;
+            background: linear-gradient(rgba(18, 18, 20, 0.8), rgba(18, 18, 20, 0.8)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            opacity: 0.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-intro { display: none; } /* Hide intro on small screens for clarity */
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .hero { padding: 0 5%; }
+            .features, .cta { padding: 4rem 5%; }
+            .fixed-contact-btn { bottom: 1rem; right: 1rem; width: 50px; height: 50px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <nav>
+        <!-- 1. Website Title -->
+        <a href="#" class="logo">Fit<span>Nation</span></a>
+        
+        <!-- 2. Introduction -->
+        <div class="nav-intro">Premium elite training community.</div>
+        
+        <!-- 3. Call-to-Action Button -->
+        <a href="#join" class="nav-cta">Join Now</a>
+    </nav>
+
+    <!-- 4. Fixed Contact Button (Floating chat/message icon) -->
+    <a href="mailto:info@FitNation.com" class="fixed-contact-btn" title="Contact Us">
+        <svg viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Push Your <span>Limits</span></h1>
+            <p>Crush your Fitness goals with premium training programs, elite coaching, and a high-energy community driven to win.</p>
+            <a href="#join" class="btn">Start Training</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose Us</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>01. Elite Coaching</h3>
+                <p>Learn from certified personal trainers dedicated to tracking your progress and perfecting your form.</p>
+            </div>
+            <div class="card">
+                <h3>02. Modern Gear</h3>
+                <p>Train with industry-leading strength machines, cardio equipment, and dedicated recovery spaces.</p>
+            </div>
+            <div class="card">
+                <h3>03. Dynamic Plans</h3>
+                <p>Access customized workout regimens and nutritional blueprints built around your unique lifestyle.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action Section -->
+    <section class="cta" id="join">
+        <div class="cta-content">
+            <h2>Join The Movement</h2>
+            <p>Sign up today and get your first week entirely free. No hidden contracts. No excuses.</p>
+            <a href="#" class="btn">Claim Free Pass</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Fit Nation. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
